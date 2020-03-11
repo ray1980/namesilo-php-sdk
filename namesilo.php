@@ -72,7 +72,6 @@ class Namesilo{
             ['contact_id',$contact_id],
         ]);
         if(!$this->request_successp($result)){
-            $this->delete_contact($contact_id);
             return false;
         }
         return true;
@@ -89,6 +88,7 @@ class Namesilo{
             ['contact_id',$contact_id],
         ]);
         if(!$this->request_successp($result)){
+            $this->delete_contact($contact_id);
             return false;
         }
         return true;
